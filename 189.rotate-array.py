@@ -10,12 +10,13 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        for i in range(k):
-            val = nums[-1]
-            for j in range(len(nums) - 1,0,-1):
-                nums[j] = nums[j-1]
-            nums[0] = val
-        
-        
+        i = 0
+        if k ==0:
+            return nums
+        while i < k:
+            val = nums.pop()
+            nums.insert(0,val)
+            i += 1
+                   
 # @lc code=end
 
